@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sensor Data History</title>
+
+	<!-- jQuery -->
+    <script src="{{ url_for('static', filename='lib/jquery-3.7.1.min.js')}}"></script> 
+
+	<!-- DataTables -->
+    <script src="{{ url_for('static', filename='lib/DataTables-1.13.8/datatables.min.js')}}"></script> 
+	<link rel="stylesheet" href="static/lib/DataTables-1.13.8/datatables.min.css">
+
+	<link rel="stylesheet" href="static/css/history.css">
+	<link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+	<header>
+		<h1>Sensor Data History</h1>
+	</header>
+
+	<nav>
+		<a id="change_page" href="/"> Go to Dashboard</a>
+	</nav>
+    <table id="sensorDataTable" border="1">
+        <thead>
+			<tr>
+				<th class="sortable" onclick="sortTable(0)">Date</th>
+				<th class="sortable" onclick="sortTable(1)">Time</th>
+				<th class="sortable" onclick="sortTable(2)">Humidity</th>
+				<th class="sortable" onclick="sortTable(3)">Temperature</th>
+			</tr>
+		</thead>
+
+        {% for row in data %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>{{ row[2] }}</td>
+                <td>{{ row[3] }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+	<script>
+		$(document).ready(function() {
+			$('#sensorDataTable').DataTable({
+				"order": [[0, "desc"], [1, "desc"]]
+			});
+		});
+	</script>
+	
+</body>
+</html>

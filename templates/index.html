@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Real-time Sensor Data</title>
+    
+    <script src="{{ url_for('static', filename='lib/socket.io.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/websocket.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/chart.umd.js')}}"></script> 
+    
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+	  <link rel="stylesheet" href="static/css/dashboard.css">
+
+</head>
+<body>
+  <header>
+    <h1>Real-time Sensor Data</h1>
+  </header>
+  <nav>
+    <a href="/history"> Go to History </a>
+  </nav>
+    <canvas id="sensorChart" width="1000" height="300"></canvas>
+</body>
+</html>

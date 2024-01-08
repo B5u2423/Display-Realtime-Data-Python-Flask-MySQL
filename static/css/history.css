@@ -1,0 +1,17 @@
+#change_page {
+	text-align: center;
+	text-decoration: none;
+	padding: 10px 20px;
+	background-color: #3498db;
+	color: #fff;
+	border-radius: 5px;
+}
+
+div {
+	margin: 20px;
+}
+
+#sensorDataTable thead th {
+	background-color: #DCDCDC ;
+	color: black; 
+}
