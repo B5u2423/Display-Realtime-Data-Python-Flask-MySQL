@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <title>Real-time Sensor Data</title>
     
-    <script src="{{ url_for('static', filename='lib/socket.io.js') }}"></script>
     <script src="{{ url_for('static', filename='js/websocket.js') }}"></script>
-    <script src="{{ url_for('static', filename='lib/chart.umd.js')}}"></script> 
-    
+    <script src="{{ url_for('vendors', filename='SocketIO/socket.io.js') }}"></script>
+    <script src="{{ url_for('vendors', filename='ChartJS/chart.umd.js')}}"></script> 
+
     <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
 	  <link rel="stylesheet" href="static/css/dashboard.css">
 
