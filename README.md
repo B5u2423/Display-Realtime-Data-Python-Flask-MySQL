@@ -4,7 +4,7 @@
 
 ## About
 
-A simple system with 2 servers: a HTTP server for handling the data from the IoT devices, and a WebSocket server to update real-time data for the client to render the chart accordingly.
+A simple system with 2 servers: a HTTP server for handling the data from the IoT devices, and a WebSocket server for sending real-time data to the client, which then will be rendered accordingly.
 
 ![Example Chart](/assets/rt-chart.png)
 
@@ -22,7 +22,7 @@ This project is built with all the following frameworks/libraries/plugins:
 
 ### Prerequisites
 
-You MUST have Python, Flask and MySQL installed, if not Google it. Most of the required Python libraries are in the `requirement.txt` file so run the following command:
+You MUST have Python, Flask and MySQL installed, if not, Google it. Most of the required Python libraries are in the `requirement.txt` file so run the following command:
 
 ```bash
 pip install -r requirement.txt
@@ -30,7 +30,7 @@ pip install -r requirement.txt
 
 ### Installing
 
-Just clone the repo and run. All the JavaScript libaries have been included in the `vendors` folder so it can be deployed locally without the Internet connection.
+Just clone the repo and run. All the JavaScript libraries have been included in the `vendors` folder so it can be deployed locally without the Internet connection.
 
 ```bash
 git clone https://github.com/B5u2423/Display-Realtime-Data-Python-Flask-MySQL.git python-display-realtime
@@ -40,9 +40,9 @@ git clone https://github.com/B5u2423/Display-Realtime-Data-Python-Flask-MySQL.gi
 
 ## Deployment
 
-Run `http-server.py` if you want to receive data from the sensors and save it to the database. I use an ESP32 with a DHT11 sensor to gather data on temperature and humidity. The port for this HTTP server is `8090`, configure the URL according to your IP and the port in the device sketch. Example of the ESP32 is in the `sketch` folder.
+Run `http-server.py` if you want to receive data from the sensors and save it to the database. I use an ESP32 with a DHT11 sensor to gather data on temperature and humidity. The port HTTP server is running on port `8090`, configure the URL according to your IP and the port in the device sketch. Example of the ESP32 is in the `sketch` folder.
 
-Run `websock-server.py`, the server run on port `8091`, connect to the server by entering `localhost:8091` to the browser address bar.
+Run `websock-server.py`, the WebSocket server is running on port `8091`, connect to the it at `localhost:8091`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
