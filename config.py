@@ -6,7 +6,7 @@ MYSQL_CONFIG = {
 }
 
 """
-For the context, the table `sensor_data` has 4 columns:
+For the context, the table `sensor_data` has 5 columns:
     * `id`          - PRIMARY KEY, INT, AUTO INCREMENT
     * `temperature` - FLOAT
     * `humidity`    - FLOAT

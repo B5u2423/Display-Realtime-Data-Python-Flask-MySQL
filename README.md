@@ -4,7 +4,7 @@
 
 ## About
 
-A simple system with 2 servers: a HTTP server for handling the data from the IoT devices, and a WebSocket server for sending real-time data to the client, which then will be rendered accordingly.
+A simple system with 2 servers: a HTTP server for handling the data from the IoT devices, and a WebSocket server for sending real-time data to the client, which then will render the chart accordingly.
 
 ![Example Chart](/assets/rt-chart.png)
 
@@ -42,7 +42,7 @@ git clone https://github.com/B5u2423/Display-Realtime-Data-Python-Flask-MySQL.gi
 
 Run `http-server.py` if you want to receive data from the sensors and save it to the database. I use an ESP32 with a DHT11 sensor to gather data on temperature and humidity. The port HTTP server is running on port `8090`, configure the URL according to your IP and the port in the device sketch. Example of the ESP32 is in the `sketch` folder.
 
-Run `websock-server.py`, the WebSocket server is running on port `8091`, connect to the it at `localhost:8091`.
+Run `websock-server.py`, the WebSocket server is running on port `8091`, connect to it at `localhost:8091`.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
