@@ -6,7 +6,11 @@
 
 A simple system with 2 servers: a HTTP server for handling the data from the IoT devices, and a WebSocket server for sending real-time data to the client, which then will render the chart accordingly.
 
+![System Overview](/assets/system-overview.png)
+*An overview of the system.*
+
 ![Example Chart](/assets/rt-chart.png)
+*The rendered real-time data page.*
 
 ## Built With
 
