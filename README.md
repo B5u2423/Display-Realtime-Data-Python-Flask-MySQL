@@ -26,7 +26,7 @@ This project is built with all the following frameworks/libraries/plugins:
 
 ### Prerequisites
 
-You MUST have Python, Flask and MySQL installed, if not, Google it. Most of the required Python libraries are in the `requirement.txt` file so run the following command:
+You MUST have Python, Flask and MySQL installed, if not, Google how to. Most of the required Python libraries are noted the `requirement.txt` file, so run the following command to automatically install them:
 
 ```bash
 pip install -r requirement.txt
@@ -34,7 +34,7 @@ pip install -r requirement.txt
 
 ### Installing
 
-Just clone the repo and run. All the JavaScript libraries have been included in the `vendors` folder so it can be deployed locally without the Internet connection.
+Just clone the repo and run. All the JavaScript libraries have been included in the `vendors` folder so the WebSocket server can be deployed locally without Internet connection.
 
 ```bash
 git clone https://github.com/B5u2423/Display-Realtime-Data-Python-Flask-MySQL.git python-display-realtime
@@ -44,7 +44,7 @@ git clone https://github.com/B5u2423/Display-Realtime-Data-Python-Flask-MySQL.gi
 
 ## Deployment
 
-Run `http-server.py` if you want to receive data from the sensors and save it to the database. I use an ESP32 with a DHT11 sensor to gather data on temperature and humidity. The port HTTP server is running on port `8090`, configure the URL according to your IP and the port in the device sketch. Example of the ESP32 is in the `sketch` folder.
+Run `http-server.py` if you want to receive data from the sensors and save it to the database. I use an ESP32 with a DHT11 sensor to gather data on temperature and humidity. The HTTP server is running on port `8090`, configure the URL according to your IP and the port in the device sketch. Example source code of the ESP32 is included the `sketch` folder.
 
 Run `websock-server.py`, the WebSocket server is running on port `8091`, connect to it at `localhost:8091`.
 
